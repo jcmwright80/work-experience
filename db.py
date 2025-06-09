@@ -2,8 +2,9 @@ import MySQLdb
 
 def get_connection():
     return MySQLdb.connect(
-        host="localhost",
+        host="127.0.0.1",
         user="root",
         password="root",
-        db="todo"
+        db="todo",
+        port=3307
     )

@@ -9,7 +9,7 @@ def index():
         task = request.form["task"]
         conn = get_connection()
         cur = conn.cursor()
-        cur.execute("INSERT INTO todos (task) VALUES (%s)", (task,))
+        cur.execute("INSERT INTO todos (task, due_date, complete) VALUES (%s,2025-06-10,0)", (task))
         conn.commit()
         conn.close()
 
